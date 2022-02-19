@@ -1,23 +1,28 @@
 {
     "type": "postgres",
-    "host": "localhost",
+    "host": "ec2-23-20-73-25.compute-1.amazonaws.com",
     "port": 5432,
-    "username": "admin",
-    "password": "1234",
-    "database": "local",
+    "username": "ijszonmwlcoekn",
+    "password": "2b8439b4898f157844c822c168c7fe0c9d59a68c7ec38bca48f0ffc66d26d6f5",
+    "database": "d821cvb5ipbvge",
+    "extra": {
+      "ssl": {
+        "rejectUnauthorized": false
+      }
+    },
     "logging": false,
     "entities": [
-       "src/entities/**/*.ts"
+       "dist/entities/**/*.js"
     ],
     "migrations": [
-       "src/migration/**/*.ts"
+       "dist/migration/**/*.js"
     ],
     "subscribers": [
-       "src/subscriber/**/*.ts"
+       "dist/subscriber/**/*.js"
     ],
     "cli": {
-       "entitiesDir": "src/entities",
-       "migrationsDir": "src/migration",
-       "subscribersDir": "src/subscriber"
+       "entitiesDir": "dist/entities",
+       "migrationsDir": "dist/migration",
+       "subscribersDir": "dist/subscriber"
     }
  }
