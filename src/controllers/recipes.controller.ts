@@ -25,7 +25,7 @@ export class RecipeController {
     static async list(req: Request, res: Response){
         const recipeService = new RecipeService()
         const recipes = await recipeService.list()
-        return res.json([])
+        return res.json(recipes)
     }
     
     static async listByTypes(req: Request, res: Response){
