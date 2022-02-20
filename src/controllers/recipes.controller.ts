@@ -7,12 +7,16 @@ export class RecipeController {
         const recipeService = new RecipeService()
         const foodService = new FoodService()
 
-        const { author, type, foods } = req.body
+        const { author, type, foods, recipeName, description, amountPeople, time } = req.body
         
         const food = await foodService.create(foods)
 
         const recipe = await recipeService.create({
             author,
+            recipeName,
+            description,
+            amountPeople,
+            time,
             type,
             foods: [
                 ...food
