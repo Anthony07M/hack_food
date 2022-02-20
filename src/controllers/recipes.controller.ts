@@ -32,7 +32,8 @@ export class RecipeController {
         const recipeService = new RecipeService()
 
         const { type } = req.params
-        const recipes = await recipeService.listByType(type)
+        const typeFormat = type.split('%').join(' ')
+        const recipes = await recipeService.listByType(typeFormat)
 
         return res.json(recipes)
     }
