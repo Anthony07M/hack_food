@@ -9,6 +9,18 @@ export class Recipes{
 
     @Column()
     author!: string
+    
+    @Column()
+    recipeName!:string
+
+    @Column()
+    description!: string
+
+    @Column('integer')
+    amountPeople!: number
+
+    @Column()
+    time!: string
 
     @Column()
     type!: string
